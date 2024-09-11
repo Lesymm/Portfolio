@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Waseem Benamor | Computer Science Student</title>
+        <link rel="icon" type="images/x-icon" href="Emoji.png" />
+        <link href='https://fonts.googleapis.com/css?family=Mulish' rel='stylesheet'>
+        <style type="text/css">
+            html{
+                scroll-behavior:smooth;
+            }
+            body{
+                padding:0;
+                margin:0;
+                background-image:linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
+            }
+            #home{
+                background-image: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
+                text-align:center;
+                padding:50px;
+                margin:auto;
+            }
+            #home h1{
+                font-size:3.5em;
+                margin:0;
+                padding:0;
+                font-family:'Mulish';
+                text-align:center;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translateX(-50%)translateY(-70%);
+            }
+            #about h1{
+                font-size:3.5em;
+                margin:0;
+                padding:0;
+                font-family:'Mulish';
+                text-align:center;
+                transform:translateY(100px);
+            }
+            #accomplishments h1{
+                font-size:3.5em;
+                margin:0;
+                padding:0;
+                font-family:'Mulish';
+                text-align:center;
+                transform:translateY(100px);
+            }
+            #contact h1{
+                font-size:3.5em;
+                margin:0;
+                padding:0;
+                font-family:'Mulish';
+                text-align:center;
+                transform:translateY(100px);
+            }
+            #home p{
+                font-size:20px;
+                margin:0;
+                padding:0;
+                font-family:'Mulish';
+                text-align:center;
+                position:relative;
+            }
+            .side-nav{
+                width:60px;
+                height:100px;
+                position:fixed;
+                z-index:1;
+                margin-left:0;
+                padding-top:20px;
+                transform: translateX(+30%)translateY(+150%);
+                background-color: white;
+                box-shadow: 0 0 5px 2px #494a4c;
+            }
+            .LinkedIn{
+                transform:translateX(+20%)translateY(-30%);
+            }
+            .Email{
+                transform:translateX(+28%)translateY(-40%);
+            }
+            .Github{
+                transform:translateX(+28%)translateY(-32%);
+            }
+            #home{
+                height:100vh;
+            }
+            #about{
+                min-height:100vh;
+                height:calc(100% - 40px);
+                background-color: rgb(214, 213, 213);
+                overflow:hidden;
+            }
+            #accomplishments{
+                min-height:100vh;
+                font-family:'Mulish';
+                height:calc(100% - 40px - 30px );
+                background-color: rgb(228, 225, 225);
+            }
+            #contact{
+                height:110vh;
+                background-color:rgb(214, 213, 213);
+            }
+            .littleLine::after{
+                content: '';
+                position: absolute;
+                height: 5px;
+                width: 3rem;
+                background: #7078e8;
+                left: 50%;
+                transform: translateX(-50%)translateY(110px);
+                border-radius: 5px;
+            }
+            #about img{
+                border-radius:0%;
+                margin-right:50px;
+                margin-left:10px;
+                margin-top:170px;
+            }
+            .text{
+                margin-left: 85px;
+                margin-right: 85px;
+                margin-top:150px;
+                text-align:left;
+                line-height:150%;
+                font-family:'Mulish';
+                position:relative;
+            }
+            .column{
+                float:left;
+                width:50%;
+                height:calc(100% - 40px - 30px);
+                text-align:center;
+            }
+            .row::after{
+                content:"";
+                display:table;
+                clear:both;
+            }
+            .column h2 {
+                margin-top:150px;
+            }
+            .column p{
+                font-size: larger;
+                max-width: max-content;
+                background-color:rgba(153,153,153,.2);
+                color:#666;
+                border-radius: 10%;
+                padding:15px;
+                margin-left:2%;
+                margin-right:2%;
+                display:inline-block;
+            }
+            .info{
+                margin-left: 10%
+            }
+            #contact p{
+                font-family: 'Mulish';
+                color:#666;
+                position:relative;
+                margin-top: 0vh;
+                font-size:10px;
+                text-align:center;
+            }
+            .miniText{
+                font-size:1.2em;
+                font-weight:100;
+                margin:0;
+                padding:0;
+                transform:translateY(120px);
+                margin-top:10px;
+                margin-left:5%;
+                margin-right:5%;
+                font-family:'Mulish';
+                text-align:center;
+                position:relative;
+            }
+            :root{
+                --height:150px;
+                --speed:200s;
+            }
+            .ticker-tape{
+                display:flex;
+                font-family:'Mulish';
+                width:100%;
+                height:75vh;
+                position:relative;
+                transform:translateY(100%);
+            }
+            .ticker-tape .ticker{
+                height: var(--height);
+                line-height: var(--height);
+                white-space:nowrap;
+                padding-right:100%;
+
+
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-timing-functions: linear;
+                -webkit-animation-name:ticker;
+                -webkit-animation-duration:var(--speed);
+
+                animation-iteration-count: infinite;
+                animation-timing-functions: linear;
+                animation-name:ticker;
+                animation-duration:var(--speed);
+
+            }
+            .ticker-tape .ticker_items{
+                display:inline-block;
+                padding:0 2rem;
+                font-size: 5rem;
+                font-weight:900;
+                letter-spacing: 1.5rem;
+                color:#7078e838;
+            }
+            @-webkit-keyframes ticker {
+                0%{
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    visibility:visible;
+                }
+                100%{
+                    -webkit-transform: translateX(-100%);
+                    transform:translateX(-100%);
+                }
+            }
+
+            /* header code here:*/
+
+            header {  
+                background-color:white;
+                border:30px solid white;
+                box-shadow: 0 0 5px 2px #494a4c;
+                position:fixed;
+                z-index:50;
+                left: 0;  
+                right: 0;  
+                display: flex;  
+                align-items: center;  
+            }  
+            header * {  
+                display: inline;  
+            }  
+            header li {  
+                margin:20px;  
+            }  
+            header li a {  
+                font-family:'Mulish';
+                color:black;
+                text-decoration:none;
+                font-weight:500;
+            }  
+            header li a:hover{
+                background-color:rgba(189, 193, 233, 0.747);
+                transition:0.2s;
+                width:max-content;
+            }
+            .container{
+                width:100%;
+                height:90vh;
+                align-items:center;
+                display:flex;
+                justify-content:center;
+            }
+            form{
+                margin-top:80px;
+                background:#7078e846;
+                display:flex;
+                flex-direction:column;
+                padding: 2vw 4vw;
+                width:90%;
+                max-width:600px;
+                border-radius:10px;
+            }
+            form h3{
+                font-family:'Mulish';
+            }
+            form input, form textarea{
+                border:0;
+                margin:10px 0;
+                padding:20px;
+                outline:none;
+                background:#e0dddd;
+                font-size:16px;
+                font-family:'Mulish';
+            }
+            form button{
+                padding:15px;
+                background:#e0dddd;
+                font-size:18px;
+                border:0;
+                outline:none;
+                cursor:pointer;
+                color:#454343;
+                width:150px;
+                margin:20px auto 0;
+                border-radius:30px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <nav>  
+                <ul>  
+                <li>  
+                <b><a href="#home"> HOME </a></b>
+                </li>  
+                <li>  
+                <b><a href="#about"> ABOUT </a></b>
+                </li>  
+                <li>  
+                <b><a href="#accomplishments"> ACCOMPLISHMENTS </a></b>
+                </li>  
+                <b><li> <a href="#contact"> CONTACT </a></b>
+                </li>  
+                </ul>  
+            </nav> 
+        </header>
+
+
+        <div class="side-nav">
+            <div class="LinkedIn">
+                <a href="https://www.linkedin.com/in/waseem-benamor" target="_blank"> <img src="LinkedIn.png" width="40"> </a>
+            </div>
+
+            <div class="Email">
+                <a href="mailto:frn7vf@virginia.edu"><img src="Email.png" width="30"></a>
+            </div>
+
+            <div class="Github">
+                <a href="https://github.com/Lesymm" target="_blank"><img src="Github.png" width="30"></a>
+            </div>
+        </div>
+
+        <section id="home">
+
+            <h1>WASEEM BENAMOR</h1>
+
+            <div class="ticker-tape">
+                <div class="ticker">
+                    <div class="ticker_items"> PYTHON | JAVA | C++ | RUST | JAVASCRIPT | MATLAB | FRENCH | ARABIC | ITALIAN | </div>
+                    <div class="ticker_items"> PYTHON | JAVA | C++ | RUST | JAVASCRIPT | MATLAB | FRENCH | ARABIC | ITALIAN | </div>
+                    <div class="ticker_items"> PYTHON | JAVA | C++ | RUST | JAVASCRIPT | MATLAB | FRENCH | ARABIC | ITALIAN | </div>
+                    <div class="ticker_items"> PYTHON | JAVA | C++ | RUST | JAVASCRIPT | MATLAB | FRENCH | ARABIC | ITALIAN | </div>
+
+                </div>
+            </div>
+            
+            
+        </section>
+
+        <section id="about">
+            <span class="littleLine">
+                <h1> About Me </h1>
+                <img src="SeniorPic.png" width="200" align="right">
+            </span>
+
+            <div class="text">
+                <p> Welcome to my personal portfolio! My name is Waseem Benamor and I am a fourth-year Computer Science student with a minor in Math at the <b><u>University of Virginia</u></b>.
+                    My academic journey has equipped me with strong skills in both theoretical and applied computer science.
+                    In addition to my coursework, I have extensive experience in software development, quantitative research, and machine learning, 
+                    gained through internships, fellowships, and personal projects. 
+                </p>
+                <p>
+                    My experience ranges from developing trading algorithms that ranked in the top 5% during my fellowship at Trexquant, 
+                    to enhancing trade execution efficiency through Python programming at Standard Chartered Bank.
+                </p>
+                <p>
+                    Outside of academics, I have a passion for leadership and giving back to the community. I founded the Computer Science Student Advisory Board at UVA, 
+                    where I serve as Chairman, and also lead the annual HooHacks Hackathon as Vice President.
+                </p>
+                <p>
+                    I developed this website myself to showcase my portfolio, using my skills in HTML, CSS, and JavaScript. I am constantly seeking opportunities to 
+                    apply my skills in new and challenging environments.
+                </p>
+            </div>
+        </section>  
+
+
+        <section id="accomplishments">
+            <span class="littleLine">
+                <h1>Accomplishments</h1>
+            </span>
+
+            <div class="row">
+                <div class="column">
+                    <h2>EXPERIENCE</h2>
+
+            <div class="info" align="left">
+                    <h3>CLASSES</h3>
+                    <ul>
+                        <li>Calculus (I, II, III)</li>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Machine Learning</li>
+                        <li>Probability & Advanced Statistics</li>
+                        <li>Complex Analysis</li>
+                        <li>Linear Algebra</li>
+                        <li>Stochastic Calculus</li>
+                    </ul>
+                    <h3>SOFTWARE DEVELOPMENT PROJECTS</h3>
+                    <ul>
+                        <li>High Frequency Trading Simulation in C++</li>
+                        <li>Stock Price Prediction Machine Learning Model in Python</li>
+                        <li>Developed a dynamic oligopoly model for Bitcoin analysis using Python and R</li>
+                    </ul>
+                    <h3>CURRENT PURSUITS</h3>
+                    <ul>
+                        <li>Quantitative Global Alpha Research</li>
+                        <li>Algorithmic Trading Strategies</li>
+                        <li>Web Development Projects</li>
+                    </ul>
+             </div>
+
+                </div>
+                <div class="column">
+                    <h2>LANGUAGES & SKILLS</h2>
+                    <p> PYTHON </p> <p> JAVA </p> <p> C++ </p>
+                    <p> RUST </p> <p> JAVASCRIPT </p> <p> FRENCH </p> <p> ARABIC </p>
+                    <p> MALTESE </p> <p> GERMAN </p> <p> PORTUGESE </p> 
+                    <p> ITALIAN </p> <p> MACHINE LEARNING </p> <p> QUANTITATIVE RESEARCH </p> 
+                    <p> SOFTWARE DEVELOPMENT </p> <p> WEB DEVELOPMENT </p>
+                </div>
+            </div>
+
+        </section>  
+
+        <section id="contact">
+            <span class="littleLine">
+                <h1>Contact Me</h1>
+            </span>
+
+            <h3 class="miniText">Please feel free to contact me with any questions or inquiries via one of the following methods!</h3>
+
+
+            <!--PHP below-->
+
+            <div class="container">
+                <form onsubmit="sendEmail();reset();return false">
+                    <h3>Send me an email!</h3>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+                    <button type="submit"> Send </button>
+                </form>
+            </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    Email.send({
+                        SecureToken:"826feb3a-4e9d-4c84-b735-31befef8e9cf",
+
+                        To: "frn7vf@virginia.edu",
+                        From : "frn7vf@virginia.edu",
+                        ReplyFrom : document.getElementById("email").value,
+                        Subject : "New Contact Form",
+                        Body: "Name: " + document.getElementById("name").value
+                            + "<br> Email: " + document.getElementById("email").value
+                            + "<br> Message: " + document.getElementById("message").value
+                    }).then(
+                    message => alert(message)
+                    );
+                }
+            </script>
+
+            <p>This website was developed by Waseem Benamor | Copyright 2024, all rights reserved.</p>
+        </section>
+
+
+    </body>
+</html>
